@@ -3,7 +3,7 @@
 namespace AntonAm\JsonLD\ContextTypes;
 
 /**
- * https://schema.org/WebSite
+ * https://schema.org/AboutPage
  */
 class AboutPage extends CreativeWork
 {
