@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\AggregateRating;
+use AntonAm\JsonLD\Test\TestCase;
 
 class AggregateRatingTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\AggregateRating::class;
+    protected $class = AggregateRating::class;
 
     protected $attributes = [
         'sameAs' => 'http://google.com/profile',

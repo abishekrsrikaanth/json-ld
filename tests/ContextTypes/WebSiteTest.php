@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\WebSite;
+use AntonAm\JsonLD\Test\TestCase;
 
 class WebSiteTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\WebSite::class;
+    protected $class = WebSite::class;
 
     protected $attributes = [
         'about' => 'The subject matter of the content.',

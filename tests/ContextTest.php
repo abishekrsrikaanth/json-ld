@@ -1,7 +1,8 @@
 <?php
 
-namespace JsonLd\Test;
+namespace AntonAm\JsonLD\Test;
 
+use AntonAm\JsonLD\Context;
 use Mockery;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
@@ -17,7 +18,7 @@ class ContextTest extends PHPUnitTestCase
      */
     public function shouldGetEventProperties()
     {
-        $context = \JsonLd\Context::create('event', ['name' => 'Foo Bar']);
+        $context = Context::create('event', ['name' => 'Foo Bar']);
 
         $this->assertEquals([
             '@context' => 'http://schema.org',
@@ -31,7 +32,7 @@ class ContextTest extends PHPUnitTestCase
      */
     public function shouldAllowSameAsToBeArray()
     {
-        $context = \JsonLd\Context::create('event', [
+        $context = Context::create('event', [
             'name' => 'Foo Bar',
             'sameAs' => [
                 'https://google.com/facebook',
@@ -57,7 +58,7 @@ class ContextTest extends PHPUnitTestCase
      */
     public function shouldAllowSameAsToBeAString()
     {
-        $context = \JsonLd\Context::create('event', [
+        $context = Context::create('event', [
             'name' => 'Foo Bar',
             'sameAs' => 'https://google.com/facebook',
         ]);
@@ -75,7 +76,7 @@ class ContextTest extends PHPUnitTestCase
      */
     public function shouldGenerateEventScriptTag()
     {
-        $context = \JsonLd\Context::create('event', ['name' => 'Foo Bar']);
+        $context = Context::create('event', ['name' => 'Foo Bar']);
 
         $this->assertEquals('<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Event","name":"Foo Bar"}</script>', $context->generate());
     }

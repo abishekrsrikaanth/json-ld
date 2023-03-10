@@ -1,9 +1,13 @@
 <?php
 
-namespace JsonLd;
+namespace AntonAm\JsonLD;
 
+use AntonAm\JsonLD\ContextTypes\BreadcrumbList;
+use AntonAm\JsonLD\ContextTypes\GeoCoordinates;
+use AntonAm\JsonLD\ContextTypes\LocalBusiness;
+use AntonAm\JsonLD\ContextTypes\PostalAddress;
 use InvalidArgumentException;
-use JsonLd\Contracts\ContextTypeInterface;
+use AntonAm\JsonLD\Contracts\ContextTypeInterface;
 
 class Context
 {
@@ -81,7 +85,7 @@ class Context
 
         // Create local context type class
         $class = ucwords(str_replace(['-', '_'], ' ', $name));
-        $class = '\\JsonLd\\ContextTypes\\' . str_replace(' ', '', $class);
+        $class = '\\AntonAm\\JsonLD\\ContextTypes\\' . str_replace(' ', '', $class);
 
         // Check for local context type
         if (class_exists($class)) {
@@ -91,17 +95,13 @@ class Context
         // Backwards compatible, remove in a future version
         switch ($name) {
             case 'address':
-                return ContextTypes\PostalAddress::class;
-                break;
+                return PostalAddress::class;
             case 'business':
-                return ContextTypes\LocalBusiness::class;
-                break;
+                return LocalBusiness::class;
             case 'breadcrumbs':
-                return ContextTypes\BreadcrumbList::class;
-                break;
+                return BreadcrumbList::class;
             case 'geo':
-                return ContextTypes\GeoCoordinates::class;
-                break;
+                return GeoCoordinates::class;
         }
 
         throw new InvalidArgumentException(sprintf('Undefined context type: "%s"', $name));

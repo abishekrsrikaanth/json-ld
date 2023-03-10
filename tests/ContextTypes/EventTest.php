@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\Event;
+use AntonAm\JsonLD\Test\TestCase;
 
 class EventTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Event::class;
+    protected $class = Event::class;
 
     protected $attributes = [
         'name' => 'Apple Fest',

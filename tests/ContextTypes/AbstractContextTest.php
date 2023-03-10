@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\Test\Stubs\ContextStub;
+use AntonAm\JsonLD\Test\TestCase;
 
 class AbstractContextTest extends TestCase
 {
-    protected $class = \JsonLd\Test\Stubs\ContextStub::class;
+    protected $class = ContextStub::class;
 
     protected $attributes = [
         'sameAs' => 'http://google.com/profile',

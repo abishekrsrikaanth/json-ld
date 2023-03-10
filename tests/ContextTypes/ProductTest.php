@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\Product;
+use AntonAm\JsonLD\Test\TestCase;
 
 class ProductTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Product::class;
+    protected $class = Product::class;
 
     protected $attributes = [
         'name' => 'Executive Anvil',

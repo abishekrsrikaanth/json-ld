@@ -1,10 +1,9 @@
 <?php
 
-namespace JsonLd\ContextTypes;
+namespace AntonAm\JsonLD\ContextTypes;
 
 /**
  * The publication format of the book.
- *
  * https://schema.org/BookFormatType
  */
 class BookFormatType extends Enumeration

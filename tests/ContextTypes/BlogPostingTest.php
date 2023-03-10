@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\BlogPosting;
+use AntonAm\JsonLD\Test\TestCase;
 
 class BlogPostingTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\BlogPosting::class;
+    protected $class = BlogPosting::class;
 
     protected $attributes = [
         'name' => 'More than That',

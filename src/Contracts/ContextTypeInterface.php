@@ -1,6 +1,6 @@
 <?php
 
-namespace JsonLd\Contracts;
+namespace AntonAm\JsonLD\Contracts;
 
 interface ContextTypeInterface
 {

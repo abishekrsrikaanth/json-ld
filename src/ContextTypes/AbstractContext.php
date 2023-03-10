@@ -1,10 +1,10 @@
 <?php
 
-namespace JsonLd\ContextTypes;
+namespace AntonAm\JsonLD\ContextTypes;
 
 use DateTime;
-use JsonLd\Context;
-use JsonLd\Contracts\ContextTypeInterface;
+use AntonAm\JsonLD\Context;
+use AntonAm\JsonLD\Contracts\ContextTypeInterface;
 
 abstract class AbstractContext implements ContextTypeInterface
 {

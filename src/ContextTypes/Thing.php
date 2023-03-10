@@ -1,6 +1,6 @@
 <?php
 
-namespace JsonLd\ContextTypes;
+namespace AntonAm\JsonLD\ContextTypes;
 
 /**
  * https://schema.org/Thing

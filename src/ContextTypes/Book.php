@@ -1,6 +1,6 @@
 <?php
 
-namespace JsonLd\ContextTypes;
+namespace AntonAm\JsonLD\ContextTypes;
 
 /**
  * Book format to meet schema requirements to make JSON-LD

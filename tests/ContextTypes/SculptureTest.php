@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\Sculpture;
+use AntonAm\JsonLD\Test\TestCase;
 
 class SculptureTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Sculpture::class;
+    protected $class = Sculpture::class;
 
     protected $attributes = [
         'url' => 'https://exemple.com/sclpture?id=1234',

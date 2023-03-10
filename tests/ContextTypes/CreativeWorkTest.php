@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\CreativeWork;
+use AntonAm\JsonLD\Test\TestCase;
 
 class CreativeWorkTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\CreativeWork::class;
+    protected $class = CreativeWork::class;
 
     protected $attributes = [
         'aggregateRating' => [

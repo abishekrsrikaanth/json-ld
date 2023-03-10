@@ -1,8 +1,8 @@
 <?php
 
-namespace JsonLd\Test\Stubs;
+namespace AntonAm\JsonLD\Test\Stubs;
 
-use JsonLd\ContextTypes\AbstractContext;
+use AntonAm\JsonLD\ContextTypes\AbstractContext;
 
 class ContextStub extends AbstractContext
 {

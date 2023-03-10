@@ -1,19 +1,21 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\Audiobook;
+use AntonAm\JsonLD\ContextTypes\BookFormatType;
+use AntonAm\JsonLD\Test\TestCase;
 
 class AudiobookTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Audiobook::class;
+    protected $class = Audiobook::class;
 
     protected $attributes = [
         'name' => 'The Title of Book',
         'isbn' => '00000000',
         'abridged' => false,
         'bookEdition' => 'Library edition',
-        'bookFormat' => \JsonLd\ContextTypes\BookFormatType::PAPERBACK,
+        'bookFormat' => BookFormatType::PAPERBACK,
         'transcript' => 'Some text and other things',
         'numberOfPages' => '1234',
         'datePublished' => '2013-10-04T00:00',

@@ -1,7 +1,8 @@
 <?php
 
-namespace JsonLd\Test;
+namespace AntonAm\JsonLD\Test;
 
+use AntonAm\JsonLD\Context;
 use Mockery;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
@@ -41,7 +42,7 @@ class TestCase extends PHPUnitTestCase
 
     protected function makeJsonLdContext()
     {
-        return \JsonLd\Context::create($this->class, $this->attributes);
+        return Context::create($this->class, $this->attributes);
     }
 
     public function testGenerateLdJson()

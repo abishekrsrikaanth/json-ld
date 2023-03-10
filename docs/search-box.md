@@ -5,7 +5,7 @@ With Google Sitelinks search box, from search results. Search users sometimes us
 ## Example
 
 ```php
-$context = \JsonLd\Context::create('search_box', [
+$context = \AntonAm\JsonLD\Context::create('search_box', [
     'url' => 'https://www.example.com/',
     'potentialAction' => [
         'target' => 'https://query.example.com/search?q={search_term_string}',
@@ -19,12 +19,12 @@ $context = \JsonLd\Context::create('search_box', [
 ```javascript
 <script type="application/ld+json">
 {
-  "@context": "http:\/\/schema.org",
+  "@context": "http://schema.org",
   "@type": "WebSite",
-  "url": "https:\/\/www.example.com\/",
+  "url": "https://www.example.com/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https:\/\/query.example.com\/search?q={search_term_string}",
+    "target": "https://query.example.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }

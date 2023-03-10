@@ -70,7 +70,7 @@ $ composer require anton-am/json-ld
 #### Business
 
 ```php
-$context = \JsonLd\Context::create('local_business', [
+$context = \AntonAm\JsonLD\Context::create('local_business', [
     'name' => 'Consectetur Adipiscing',
     'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
     'telephone' => '555-555-5555',
@@ -93,7 +93,7 @@ echo $context; // Will output the script tag
 ### News Article
 
 ```php
-$context = \JsonLd\Context::create('news_article', [
+$context = \AntonAm\JsonLD\Context::create('news_article', [
     'headline' => 'Article headline',
     'description' => 'A most wonderful article',
     'mainEntityOfPage' => [
@@ -133,7 +133,7 @@ Even though this example shows using the JSON-LD inside of a `Laracasts\Presente
 
 namespace App\Presenters;
 
-use JsonLd\Context;
+use AntonAm\JsonLD\Context;
 use Laracasts\Presenter\Presenter;
 
 class BusinessPresenter extends Presenter
@@ -141,7 +141,7 @@ class BusinessPresenter extends Presenter
     /**
      * Create JSON-LD object.
      *
-     * @return \JsonLd\Context
+     * @return \AntonAm\JsonLD\Context
      */
     public function jsonLd()
     {
@@ -188,9 +188,9 @@ The first argument for the `create($context, array $data = [])` method also acce
 ```php
 <?php
 
-namespace App\JsonLd;
+namespace App\JsonLD;
 
-use JsonLd\ContextTypes\AbstractContext;
+use AntonAm\JsonLD\ContextTypes\AbstractContext;
 
 class FooBar extends AbstractContext
 {
@@ -209,7 +209,7 @@ class FooBar extends AbstractContext
 ```
 
 ```php
-$context = \JsonLd\Context::create(\App\JsonLd\FooBar::class, [
+$context = \AntonAm\JsonLD\Context::create(\App\JsonLD\FooBar::class, [
     'name' => 'Foo Foo headline',
     'description' => 'Bar bar article description',
     'url' => 'http://google.com',

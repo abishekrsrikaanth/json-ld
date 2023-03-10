@@ -1,13 +1,14 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\ContactPoint;
+use AntonAm\JsonLD\Test\TestCase;
 
 class ContactPointTest extends TestCase
 {
 
-    protected $class = \JsonLd\ContextTypes\ContactPoint::class;
+    protected $class = ContactPoint::class;
 
     protected $attributes = [
         'telephone' => '18009999999',

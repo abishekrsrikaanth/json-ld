@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\MusicPlaylist;
+use AntonAm\JsonLD\Test\TestCase;
 
 class MusicPlaylistTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\MusicPlaylist::class;
+    protected $class = MusicPlaylist::class;
 
     protected $attributes = [
         'name' => 'magni dolores eo',

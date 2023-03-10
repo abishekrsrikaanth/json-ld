@@ -1,12 +1,13 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\Recipe;
+use AntonAm\JsonLD\Test\TestCase;
 
 class RecipeTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Recipe::class;
+    protected $class = Recipe::class;
 
     protected $attributes = [
         'name' => 'Fried Sugar Egg',

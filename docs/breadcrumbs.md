@@ -5,7 +5,7 @@ Breadcrumb trails on a page indicate the page's position in the site hierarchy. 
 ## Example
 
 ```php
-$context = \JsonLd\Context::create('breadcrumb_list', [
+$context = \AntonAm\JsonLD\Context::create('breadcrumb_list', [
     'itemListElement' => [
         [
             'url' => 'https://example.com/arts',
@@ -28,14 +28,14 @@ $context = \JsonLd\Context::create('breadcrumb_list', [
 ```javascript
 <script type="application/ld+json">
 {
-  "@context": "http:\/\/schema.org",
+  "@context": "http://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "item": {
-        "@id": "https:\/\/example.com\/arts",
+        "@id": "https://example.com/arts",
         "name": "Arts"
       }
     },
@@ -43,7 +43,7 @@ $context = \JsonLd\Context::create('breadcrumb_list', [
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@id": "https:\/\/example.com\/arts\/books",
+        "@id": "https://example.com/arts/books",
         "name": "Books"
       }
     },
@@ -51,7 +51,7 @@ $context = \JsonLd\Context::create('breadcrumb_list', [
       "@type": "ListItem",
       "position": 3,
       "item": {
-        "@id": "https:\/\/example.com\/arts\/books\/poetry",
+        "@id": "https://example.com/arts/books/poetry",
         "name": "Poetry"
       }
     }

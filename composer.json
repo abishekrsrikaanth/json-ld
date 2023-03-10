@@ -1,7 +1,12 @@
 {
   "name": "anton-am/json-ld",
   "description": "Extremely simple JSON-LD markup generator.",
-  "keywords": ["json-ld", "generator", "schema", "structured-data"],
+  "keywords": [
+    "json-ld",
+    "generator",
+    "schema",
+    "structured-data"
+  ],
   "license": "BSD-2-Clause",
   "authors": [
     {
@@ -14,7 +19,7 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^8.0|^7.2",
     "ext-json": "*"
   },
   "require-dev": {
@@ -25,15 +30,15 @@
   },
   "autoload": {
     "psr-4": {
-      "JsonLd\\": "src"
+      "AntonAm\\JsonLD\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "JsonLd\\Test\\": "tests"
+      "AntonAm\\JsonLD\\Test\\": "tests"
     }
   },
-  "archive" : {
+  "archive": {
     "exclude": [
       "/docs",
       "/tests"

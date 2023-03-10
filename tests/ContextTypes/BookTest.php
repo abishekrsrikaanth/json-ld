@@ -1,19 +1,21 @@
 <?php
 
-namespace JsonLd\Test\ContextTypes;
+namespace AntonAm\JsonLD\Test\ContextTypes;
 
-use JsonLd\Test\TestCase;
+use AntonAm\JsonLD\ContextTypes\Book;
+use AntonAm\JsonLD\ContextTypes\BookFormatType;
+use AntonAm\JsonLD\Test\TestCase;
 
 class BookTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Book::class;
+    protected $class = Book::class;
 
     protected $attributes = [
         'name' => 'The Title of Book',
         'isbn' => '00000000',
         'abridged' => false,
         'bookEdition' => 'Library edition',
-        'bookFormat' => \JsonLd\ContextTypes\BookFormatType::PAPERBACK,
+        'bookFormat' => BookFormatType::PAPERBACK,
         'numberOfPages' => '1234',
         'datePublished' => '2013-10-04T00:00',
         'aggregateRating' => [

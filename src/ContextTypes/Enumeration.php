@@ -1,6 +1,6 @@
 <?php
 
-namespace JsonLd\ContextTypes;
+namespace AntonAm\JsonLD\ContextTypes;
 
 /**
  * Lists or enumerations—for example, a list of cuisines or music genres, etc.
