@@ -16,5 +16,4 @@ class Audiobook extends AudioObject
         'duration' => Duration::class,
         'readBy' => Person::class,
     ];
-
 }

@@ -17,5 +17,4 @@ class Enumeration extends Thing
     protected $structure = [
         'supersededBy' => Enumeration::class,
     ];
-
 }

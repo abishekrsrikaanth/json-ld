@@ -70,5 +70,4 @@ class ProductAggregateOfferTest extends TestCase
             'availability' => 'http://schema.org/InStock'
         ], $context->getProperty('offers'));
     }
-
 }

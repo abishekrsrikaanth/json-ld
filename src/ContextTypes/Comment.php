@@ -16,5 +16,4 @@ class Comment extends CreativeWork
         'downvoteCount' => null,
         'upvoteCount' => null,
     ];
-
 }

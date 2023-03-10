@@ -46,5 +46,4 @@ class CreativeWork extends Thing
     {
         return $this->truncate($text, 260);
     }
-
 }

@@ -75,8 +75,9 @@ class EventTest extends TestCase
         $context = $this->make();
 
         $this->assertEquals(
-            'https://google.com/some_logo.png'
-        , $context->getProperty('image'));
+            'https://google.com/some_logo.png',
+            $context->getProperty('image')
+        );
     }
 
     /**
@@ -87,7 +88,8 @@ class EventTest extends TestCase
         $context = $this->make();
 
         $this->assertEquals(
-            'A description'
-            , $context->getProperty('description'));
+            'A description',
+            $context->getProperty('description')
+        );
     }
 }

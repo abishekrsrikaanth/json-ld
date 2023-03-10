@@ -13,5 +13,4 @@ class BreadcrumbList extends ItemList
      * @var array
      */
     protected $structure = [];
-
 }

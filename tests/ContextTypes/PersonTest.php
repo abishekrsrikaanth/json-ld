@@ -56,46 +56,56 @@ class PersonTest extends TestCase
 
         $this->assertPropertyEquals('description', 'a man in the middle');
 
-        $this->assertPropertyEquals('mainEntityOfPage',
+        $this->assertPropertyEquals(
+            'mainEntityOfPage',
             [
                 '@type' => 'WebPage',
                 '@id' => 'https://example.com/anonymous.html',
-            ]);
+            ]
+        );
 
-        $this->assertPropertyEquals('image',
+        $this->assertPropertyEquals(
+            'image',
             [
                 '@type' => 'ImageObject',
                 'url' => 'https://google.com/Doctor.jpg',
                 'height' => 800,
                 'width' => 800,
-            ]);
+            ]
+        );
 
         $this->assertPropertyEquals('additionalName', 'phpUnit hacker');
 
-        $this->assertPropertyEquals('address',
+        $this->assertPropertyEquals(
+            'address',
             [
                 '@type' => 'PostalAddress',
                 'addressLocality' => 'Paris',
                 'addressCountry' => 'France'
-            ]);
+            ]
+        );
 
         $this->assertPropertyEquals('award', 'phpUnit Excellence');
 
         $this->assertPropertyEquals('birthDate', '1943-10-04T00:00');
 
-        $this->assertPropertyEquals('birthPlace',
+        $this->assertPropertyEquals(
+            'birthPlace',
             [
                 '@type' => 'Place',
                 'name' => 'Paris',
-            ]);
+            ]
+        );
 
         $this->assertPropertyEquals('deathDate', '2013-10-04T00:00');
 
-        $this->assertPropertyEquals('deathPlace',
+        $this->assertPropertyEquals(
+            'deathPlace',
             [
                 '@type' => 'Place',
                 'name' => 'London',
-            ]);
+            ]
+        );
 
         $this->assertPropertyEquals('email', 'toto@yoyo.fr');
 
@@ -103,15 +113,18 @@ class PersonTest extends TestCase
 
         $this->assertPropertyEquals('faxNumber', '0000000000');
 
-        $this->assertPropertyEquals('follows',
+        $this->assertPropertyEquals(
+            'follows',
             [
                 '@type' => 'Person',
                 'name' => 'strange follower'
-            ]);
+            ]
+        );
 
         $this->assertPropertyEquals('givenName', 'Doctor');
 
-        $this->assertPropertyEquals('homeLocation',
+        $this->assertPropertyEquals(
+            'homeLocation',
             [
                 '@type' => 'Place',
                 'name' => 'Fluff Hut',
@@ -127,13 +140,14 @@ class PersonTest extends TestCase
 
         $this->assertPropertyEquals('jobTitle', 'tester');
 
-        $this->assertPropertyEquals('parent',
+        $this->assertPropertyEquals(
+            'parent',
             [
                 '@type' => 'Person',
                 'name' => 'daddy'
-            ]);
+            ]
+        );
 
         $this->assertPropertyEquals('telephone', '+330102030405');
     }
-
 }

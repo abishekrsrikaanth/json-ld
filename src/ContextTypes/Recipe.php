@@ -21,5 +21,4 @@ class Recipe extends HowTo
         'recipeCuisine' => null,
         'nutrition' => NutritionInformation::class,
     ];
-
 }

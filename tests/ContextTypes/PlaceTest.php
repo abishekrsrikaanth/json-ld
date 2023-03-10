@@ -22,24 +22,29 @@ class PlaceTest extends TestCase
         ],
     ];
 
-    public function test_should_have_properties() {
+    public function test_should_have_properties()
+    {
 
         $this->assertPropertyEquals('name', 'Fluff Hut');
 
-        $this->assertPropertyEquals('address',
+        $this->assertPropertyEquals(
+            'address',
             [
                 '@type' => 'PostalAddress',
                 'streetAddress' => '112 Apple St.',
                 'addressLocality' => 'Hamden',
                 'addressRegion' => 'CT',
                 'postalCode' => '06514',
-            ]);
+            ]
+        );
 
-        $this->assertPropertyEquals('review',
+        $this->assertPropertyEquals(
+            'review',
             [
                 '@type' => 'Review',
                 'reviewBody' => 'beautifull place',
                 'reviewRating' => 10,
-            ]);
+            ]
+        );
     }
 }

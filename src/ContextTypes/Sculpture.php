@@ -13,5 +13,4 @@ class Sculpture extends CreativeWork
      * @var array
      */
     protected $structure = [];
-
 }

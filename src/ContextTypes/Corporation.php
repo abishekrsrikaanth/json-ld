@@ -15,5 +15,4 @@ class Corporation extends Organization
     protected $structure = [
         'tickerSymbol' => null,
     ];
-
 }

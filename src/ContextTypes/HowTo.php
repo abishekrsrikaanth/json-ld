@@ -16,5 +16,4 @@ class HowTo extends CreativeWork
         'prepTime' => null,
         'totalTime' => null,
     ];
-
 }

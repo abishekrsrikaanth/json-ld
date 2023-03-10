@@ -24,5 +24,4 @@ class Offer extends Thing
         'validFrom' => null,
         'seller' => Organization::class,
     ];
-
 }

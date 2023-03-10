@@ -30,5 +30,4 @@ class Product extends Thing
         'width' => QuantitativeValue::class,
         'weight' => QuantitativeValue::class,
     ];
-
 }

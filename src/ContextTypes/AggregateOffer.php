@@ -14,5 +14,4 @@ class AggregateOffer extends Offer
         'lowPrice' => null,
         'offerCount' => null,
     ];
-
 }

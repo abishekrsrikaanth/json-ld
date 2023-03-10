@@ -23,5 +23,4 @@ class Organization extends Thing
         'aggregateRating' => AggregateRating::class,
         'areaServed' => null,
     ];
-
 }

@@ -23,5 +23,4 @@ class Book extends CreativeWork
         'isbn' => null,
         'numberOfPages' => null,
     ];
-
 }

@@ -18,5 +18,4 @@ class Event extends Thing
         'offers' => Offer::class,
         'location' => Place::class,
     ];
-
 }

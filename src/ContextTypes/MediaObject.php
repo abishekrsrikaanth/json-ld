@@ -40,5 +40,4 @@ class MediaObject extends CreativeWork
         'uploadDate' => DateTime::class,
         'width' => QuantitativeValue::class,
     ];
-
 }

@@ -21,5 +21,4 @@ class MusicRecording extends MusicAbstractContext
         'inPlaylist' => MusicPlaylist::class,
         'isrcCode' => null,
     ];
-
 }

@@ -1,24 +1,16 @@
 # JSON-LD Generator
 
-[![Build Status](https://travis-ci.org/Torann/json-ld.svg)](https://travis-ci.org/Torann/json-ld)
-[![Latest Stable Version](https://poser.pugx.org/torann/json-ld/v/stable.png)](https://packagist.org/packages/torann/json-ld)
-[![Total Downloads](https://poser.pugx.org/torann/json-ld/downloads.png)](https://packagist.org/packages/torann/json-ld)
-[![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/torann)
-[![Donate weekly to this project using Gratipay](https://img.shields.io/badge/gratipay-donate-yellow.svg)](https://liberapay.com/Torann/)
-[![Donate to this project using Flattr](https://img.shields.io/badge/flattr-donate-yellow.svg)](https://flattr.com/profile/torann)
-[![Donate to this project using Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4CJA2A97NPYVU)
-
 Extremely simple JSON-LD generator.
 
 ## Installation
 
 - [JSON-LD Generator on Packagist](https://packagist.org/packages/torann/json-ld)
-- [JSON-LD Generator on GitHub](https://github.com/Torann/json-ld)
+- [JSON-LD Generator on GitHub](https://github.com/Anton-Am/json-ld)
 
 From the command line run
 
 ```
-$ composer require torann/json-ld
+$ composer require anton-am/json-ld
 ```
 
 ## Methods

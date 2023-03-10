@@ -18,5 +18,4 @@ class Place extends Thing
         'aggregateRating' => AggregateRating::class,
         'geo' => GeoCoordinates::class,
     ];
-
 }

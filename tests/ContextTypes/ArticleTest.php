@@ -221,5 +221,4 @@ class ArticleTest extends TestCase
             'dateCreated' => '2018-06-14T23:23:00+02:00',
         ], $context->getProperty('comment')[1]);
     }
-
 }

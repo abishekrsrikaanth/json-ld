@@ -16,5 +16,4 @@ class AudioObject extends MediaObject
         'caption' => MediaObject::class,
         'transcript' => null,
     ];
-
 }

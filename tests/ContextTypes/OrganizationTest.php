@@ -29,7 +29,8 @@ class OrganizationTest extends TestCase
     /**
      * @test
      */
-    public function test_should_have_properties() {
+    public function test_should_have_properties()
+    {
 
         $this->assertPropertyEquals('name', 'Said Organization');
 

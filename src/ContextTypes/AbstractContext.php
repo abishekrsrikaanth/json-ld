@@ -78,14 +78,14 @@ abstract class AbstractContext implements ContextTypeInterface
         // Set properties
         $properties = array_merge([
             '@context' => 'http://schema.org',
-            '@type' => $this->type,
-            'sameAs' => null
+            '@type'    => $this->type,
+            'sameAs'   => null
         ], $this->structure);
 
         // Set properties from attributes
         foreach ($properties as $key => $property) {
             $this->properties[$key] = $this->makeProperty(
-                $key, $property, $this->getArrValue($attributes, $key,'')
+                $key, $property, $this->getArrValue($attributes, $key, '')
             );
         }
 
@@ -97,7 +97,6 @@ abstract class AbstractContext implements ContextTypeInterface
      * Set sameAs Attribute
      *
      * @param mixed $value
-     *
      * @return mixed
      */
     protected function setSameAsAttribute($value)
@@ -119,8 +118,7 @@ abstract class AbstractContext implements ContextTypeInterface
      * Get an item from properties.
      *
      * @param string $key
-     * @param mixed  $default
-     *
+     * @param mixed $default
      * @return mixed
      */
     public function getProperty(string $key, $default = null)
@@ -134,9 +132,8 @@ abstract class AbstractContext implements ContextTypeInterface
      * Set property value in attributes.
      *
      * @param string $key
-     * @param mixed  $property
-     * @param mixed  $value
-     *
+     * @param mixed $property
+     * @param mixed $value
      * @return mixed
      */
     protected function makeProperty(string $key, $property, $value = null)
@@ -189,7 +186,6 @@ abstract class AbstractContext implements ContextTypeInterface
      * Set context type.
      *
      * @param string $type
-     *
      * @return void
      */
     protected function setType(string $type): void
@@ -201,8 +197,7 @@ abstract class AbstractContext implements ContextTypeInterface
      * Get nested context array.
      *
      * @param string $class
-     * @param mixed  $attributes
-     *
+     * @param mixed $attributes
      * @return mixed
      */
     protected function getNestedContext(string $class, $attributes = null)
@@ -225,7 +220,6 @@ abstract class AbstractContext implements ContextTypeInterface
      * Filter nested context array.
      *
      * @param array $properties
-     *
      * @return array
      */
     protected function filterNestedContext(array $properties = []): array
@@ -239,7 +233,6 @@ abstract class AbstractContext implements ContextTypeInterface
      * Determine if a get mutator exists for an attribute.
      *
      * @param string $key
-     *
      * @return bool
      */
     protected function hasGetMutator(string $key): bool
@@ -251,8 +244,7 @@ abstract class AbstractContext implements ContextTypeInterface
      * Get the value of an attribute using its mutator.
      *
      * @param string $key
-     * @param mixed  $args
-     *
+     * @param mixed $args
      * @return mixed
      */
     protected function mutateAttribute(string $key, $args)
@@ -264,7 +256,6 @@ abstract class AbstractContext implements ContextTypeInterface
      * Get mutator name from string.
      *
      * @param string $value
-     *
      * @return string
      */
     protected function getMutatorName($value): string
@@ -279,7 +270,6 @@ abstract class AbstractContext implements ContextTypeInterface
      *
      * @param array $template
      * @param array $props
-     *
      * @return array|null
      */
     protected function mapProperty(array $template = [], array $props = []): ?array
@@ -301,10 +291,9 @@ abstract class AbstractContext implements ContextTypeInterface
      * Trim a string to a given number of words
      *
      * @param string $string
-     * @param int    $limit
+     * @param int $limit
      * @param string $pad
      * @param string $break
-     *
      * @return string
      */
     protected function truncate(string $string, int $limit, string $pad = '...', string $break = ' '): string
@@ -327,10 +316,9 @@ abstract class AbstractContext implements ContextTypeInterface
     /**
      * Get an item from an array.
      *
-     * @param array  $array
+     * @param array $array
      * @param string $key
-     * @param mixed  $default
-     *
+     * @param mixed $default
      * @return mixed
      */
     protected function getArrValue(array $array, string $key, $default = null)
@@ -349,13 +337,12 @@ abstract class AbstractContext implements ContextTypeInterface
      *
      * @param array $value
      * @param string|array $property
-     *
      * @retrun bool
      */
     protected function hasValidContext(array $value, $property)
     {
         if (array_key_exists('@type', $value)) {
-            $class_name = __NAMESPACE__ .'\\'. $value['@type'];
+            $class_name = __NAMESPACE__ . '\\' . $value['@type'];
 
             if (!is_array($property)) {
                 $property = [$property];
@@ -369,7 +356,7 @@ abstract class AbstractContext implements ContextTypeInterface
 
     protected function makeContext(array $value)
     {
-        $property = __NAMESPACE__ .'\\'. $value['@type'];
+        $property = __NAMESPACE__ . '\\' . $value['@type'];
 
         return $this->getNestedContext($property, $value);
     }

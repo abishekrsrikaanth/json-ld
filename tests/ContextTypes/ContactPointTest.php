@@ -33,5 +33,4 @@ class ContactPointTest extends TestCase
 
         $this->assertEquals('customer service', $context->getProperty('contactType'));
     }
-
 }

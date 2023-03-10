@@ -10,8 +10,8 @@ abstract class MusicAbstractContext extends AbstractContext
      * @var array
      */
     protected $structure = [
-        '@id' => null,
-        'url' => null,
+        '@id'  => null,
+        'url'  => null,
         'name' => null,
     ];
 
@@ -19,7 +19,6 @@ abstract class MusicAbstractContext extends AbstractContext
      * Set the canonical URL of the article page.
      *
      * @param string $url
-     *
      * @return array
      */
     protected function setUrlAttribute($url)
@@ -34,7 +33,6 @@ abstract class MusicAbstractContext extends AbstractContext
      * Set genre(s) attribute
      *
      * @param array|string $items
-     *
      * @return string
      */
     protected function setGenreAttribute($items)
@@ -45,5 +43,4 @@ abstract class MusicAbstractContext extends AbstractContext
 
         return implode(', ', $items);
     }
-
 }
