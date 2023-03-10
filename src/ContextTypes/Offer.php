@@ -2,7 +2,10 @@
 
 namespace JsonLd\ContextTypes;
 
-class Offer extends AbstractContext
+/**
+ * https://schema.org/Offer
+ */
+class Offer extends Thing
 {
     /**
      * Property structure
@@ -14,9 +17,12 @@ class Offer extends AbstractContext
         'price' => null,
         'priceCurrency' => null,
         'priceValidUntil' => null,
-        'url' => null,
         'itemCondition' => null,
         'availability' => null,
         'eligibleQuantity' => QuantitativeValue::class,
+        'category' => null,
+        'validFrom' => null,
+        'seller' => Organization::class,
     ];
+
 }

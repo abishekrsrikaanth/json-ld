@@ -12,7 +12,7 @@ class CreativeWork extends Thing
      *
      * @var array
      */
-    private $extendedStructure = [
+    protected $structure = [
         'about' => Thing::class,
         'aggregateRating' => AggregateRating::class,
         'alternativeHeadline' => null,
@@ -36,81 +36,15 @@ class CreativeWork extends Thing
     ];
 
     /**
-     * Constructor. Merges extendedStructure up
-     *
-     * @param array $attributes
-     * @param array $extendedStructure
-     */
-    public function __construct(array $attributes, array $extendedStructure = [])
-    {
-        parent::__construct(
-            $attributes, array_merge($this->structure, $this->extendedStructure, $extendedStructure)
-        );
-    }
-
-    /**
      * Set the article body attribute.
      *
-     * @param string $txt
+     * @param string $text
      *
-     * @return array
+     * @return string
      */
-    protected function setTextAttribute($txt)
+    protected function setTextAttribute(string $text): string
     {
-        return $this->truncate($txt, 260);
+        return $this->truncate($text, 260);
     }
 
-    /**
-     * Set the authors
-     *
-     * @param array $items
-     *
-     * @return array
-     */
-    protected function setAuthorAttribute($items)
-    {
-        if (is_array($items) === false) {
-            return $items;
-        }
-
-        return array_map(function ($item) {
-            return $this->getNestedContext(Person::class, $item);
-        }, $items);
-    }
-
-    /**
-     * Set the comments
-     *
-     * @param array $items
-     *
-     * @return array
-     */
-    protected function setCommentAttribute($items)
-    {
-        if (is_array($items) === false) {
-            return $items;
-        }
-
-        return array_map(function ($item) {
-            return $this->getNestedContext(Comment::class, $item);
-        }, $items);
-    }
-
-    /**
-     * Set the reviews
-     *
-     * @param array $items
-     *
-     * @return array
-     */
-    protected function setReviewAttribute($items)
-    {
-        if (is_array($items) === false) {
-            return $items;
-        }
-
-        return array_map(function ($item) {
-            return $this->getNestedContext(Review::class, $item);
-        }, $items);
-    }
 }

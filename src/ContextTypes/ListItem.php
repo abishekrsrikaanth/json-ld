@@ -2,7 +2,10 @@
 
 namespace JsonLd\ContextTypes;
 
-class ListItem extends AbstractContext
+/**
+ * https://schema.org/ListItem
+ */
+class ListItem extends Thing
 {
     /**
      * Property structure
@@ -21,7 +24,7 @@ class ListItem extends AbstractContext
      *
      * @return array
      */
-    protected function setItemAttribute($item)
+    protected function setItemAttribute(array $item): array
     {
         return [
             '@id' => $this->getArrValue($item, 'url'),

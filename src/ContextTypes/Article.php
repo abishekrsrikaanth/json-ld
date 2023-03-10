@@ -12,62 +12,44 @@ class Article extends CreativeWork
      *
      * @var array
      */
-    private $extendedStructure = [
+    protected $structure = [
         'articleBody' => null,
         'articleSection' => null,
         'pageEnd' => null,
         'pageStart' => null,
         'pagination' => null,
         'wordCount' => null,
-        'mainEntityOfPage' => WebPage::class,
     ];
 
     /**
-     * Constructor. Merges extendedStructure up
-     *
-     * @param array $attributes
-     * @param array $extendedStructure
+     * {@inheritDoc}
      */
-    public function __construct(array $attributes, array $extendedStructure = [])
+    protected function setTextAttribute(string $text): string
     {
-        parent::__construct(
-            $attributes, array_merge($this->structure, $this->extendedStructure, $extendedStructure)
-        );
+        return $this->truncate($text, 260);
     }
 
     /**
      * Set the description attribute.
      *
-     * @param string $txt
+     * @param string $text
      *
      * @return string
      */
-    protected function setDescriptionAttribute($txt)
+    protected function setDescriptionAttribute(string $text): string
     {
-        return $this->truncate($txt, 260);
-    }
-
-    /**
-     * Set the text attribute.
-     *
-     * @param string $txt
-     *
-     * @return string
-     */
-    protected function setTextAttribute($txt)
-    {
-        return $this->truncate($txt, 260);
+        return $this->truncate($text, 260);
     }
 
     /**
      * Set the article body attribute.
      *
-     * @param string $txt
+     * @param string $text
      *
      * @return string
      */
-    protected function setArticleBodyAttribute($txt)
+    protected function setArticleBodyAttribute(string $text): string
     {
-        return $this->truncate($txt, 260);
+        return $this->truncate($text, 260);
     }
 }

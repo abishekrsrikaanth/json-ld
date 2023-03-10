@@ -12,7 +12,7 @@ class Person extends Thing
      *
      * @var array
      */
-    protected $extendedStructure = [
+    protected $structure = [
         'additionalName' => null,
         'address' => null, // PostalAddress or Text
         'affiliation' => null,
@@ -40,22 +40,11 @@ class Person extends Thing
     ];
 
     /**
-     * Constructor. Merges extendedStructure up
-     *
-     * @param array $attributes
-     * @param array $extendedStructure
-     */
-    public function __construct(array $attributes, array $extendedStructure = [])
-    {
-        parent::__construct($attributes, array_merge($this->structure, $this->extendedStructure, $extendedStructure));
-    }
-
-    /**
      * Set the address
      *
-     * @param array $items
+     * @param mixed $items
      *
-     * @return array
+     * @return mixed
      */
     protected function setAddressAttribute($items)
     {

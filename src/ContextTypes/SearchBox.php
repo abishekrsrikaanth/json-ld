@@ -2,6 +2,9 @@
 
 namespace JsonLd\ContextTypes;
 
+/**
+ * Not an offical context according to schema.org
+ */
 class SearchBox extends AbstractContext
 {
     /**
@@ -15,11 +18,9 @@ class SearchBox extends AbstractContext
     ];
 
     /**
-     * After fill event.
-     *
-     * @param array $attributes
+     * {@inheritDoc}
      */
-    public function afterFill($attributes)
+    public function afterFill($attributes): void
     {
         $this->setType('WebSite');
     }
@@ -31,7 +32,7 @@ class SearchBox extends AbstractContext
      *
      * @return array
      */
-    protected function setPotentialActionAttribute($properties)
+    protected function setPotentialActionAttribute(array $properties): array
     {
         return array_merge(['@type' => 'SearchAction'], $properties);
     }

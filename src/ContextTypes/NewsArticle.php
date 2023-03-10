@@ -2,37 +2,27 @@
 
 namespace JsonLd\ContextTypes;
 
-class NewsArticle extends AbstractContext
+/**
+ * https://schema.org/NewsArticle
+ */
+class NewsArticle extends Article
 {
     /**
      * Property structure
      *
      * @var array
      */
-    protected $structure = [
-        'headline' => null,
-        'description' => null,
-        'url' => null,
-        'mainEntityOfPage' => WebPage::class,
-        'image' => ImageObject::class,
-        'video' => VideoObject::class,
-        'dateCreated' => null,
-        'dateModified' => null,
-        'datePublished' => null,
-        'author' => Person::class,
-        'publisher' => Organization::class,
-        'articleBody' => null,
-    ];
+    protected $structure = [];
 
     /**
      * Set the description attribute.
      *
-     * @param string $txt
+     * @param string $text
      *
      * @return string
      */
-    protected function setDescriptionAttribute($txt)
+    protected function setDescriptionAttribute(string $text): string
     {
-        return $this->truncate($txt, 260);
+        return $this->truncate($text, 260);
     }
 }
