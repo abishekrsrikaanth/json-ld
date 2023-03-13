@@ -5,7 +5,7 @@ namespace AntonAm\JsonLD\ContextTypes;
 /**
  * https://schema.org/AboutPage
  */
-class AboutPage extends CreativeWork
+class Blog extends CreativeWork
 {
     /**
      * Property structure
